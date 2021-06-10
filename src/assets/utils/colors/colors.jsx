@@ -1,5 +1,5 @@
 const colors = {
-
+primary:'#3F3838',
 
 
 }
