@@ -1,5 +1,6 @@
 const colors = {
 primary:'#3F3838',
+yelow:'#FFCB13'
 
 
 }

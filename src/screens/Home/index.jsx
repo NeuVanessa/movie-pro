@@ -7,9 +7,9 @@ export default function Home() {
     return (
 
 <View>
-    <Header/>
+    < Header image={Logo} search="search"/>
  
-<Text> AQUI SERÁ A HOME </Text>
+
 
 </View>
     )
