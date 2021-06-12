@@ -19,7 +19,7 @@ export default function DubbedMovie({ title }) {
   const language = "language=pt-BR";
   const isMovies = async () => {
     const response = await api.get(
-      `movie/popular?${apiKey}&${language}&page=[2,3]`
+      `movie/popular?${apiKey}&${language}&page=3`
     );
     setLatest(response.data.results);
   };

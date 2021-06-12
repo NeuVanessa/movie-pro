@@ -5,7 +5,11 @@ import SliderMovies from "../../components/SliderMovies";
 
 import Logo from "../../assets/utils/images/logo.png";
 import Continues from "../../components/Continues";
-import DubbedMovie from '../../components/DubbedMovie';
+import DubbedMovie from "../../components/DubbedMovie";
+import MostVoted from "../../components/MostVoted";
+import PosterMovie from "../../components/PosterMovie";
+import NextMovie from "../../components/NextMovie";
+
 import { Container } from "./styles";
 //import Add from "../../services/movies/AddedNow.json";
 
@@ -32,19 +36,18 @@ export default function Home() {
           <DubbedMovie title="POPULARES" />
         </View>
 
-
+        <View style={{ flexDirection: "column", flex: 1 }}>
+          <View style={{ top: 0, backgroundColor: "#FFCB13" }}>
+            <MostVoted title="MAIS AVALIADOS" />
+          </View>
+          <View style={{ bottom: 30, backgroundColor: "#FFCB13", height: 260 }}>
+            <PosterMovie title="EM CARTAZ" />
+          </View>
+          <View style={{ bottom: 30, backgroundColor: "#FFCB13", height: 450 }}>
+            <NextMovie title="É HORA DA PIPOCA [PROXIMOS FILMES A LANCAR]" />
+          </View>
         </View>
-      {/* <View style={{ flexDirection: "column", flex: 1 }}>
-        <View style={{ top: 0, backgroundColor: "#FFCB13" }}>
-          <Teste title="DUBLADOS" />
-        </View>
-        <View style={{ bottom: 30, backgroundColor: "#FFCB13", height: 260 }}>
-          <Teste title="TERRORZINGO DA NOITE" />
-        </View>
-        <View style={{ bottom: 30, backgroundColor: "#FFCB13", height: 320 }}>
-          <Teste title="É HORA DA PIPOCA" />
-        </View>
-      </View> */}
+      </View>
     </Container>
   );
 }
