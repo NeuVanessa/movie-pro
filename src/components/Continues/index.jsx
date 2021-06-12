@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useImperativeHandle } from "react";
 import { View, Text, FlatList } from "react-native";
 import {
   Container,
@@ -6,34 +6,62 @@ import {
   Carousel,
   ContainerItens,
   Image,
-  TextExemple,TextDescription
+  TextExemple,
+  TextDescription,
 } from "./styles";
-
+import api from "../../services/api";
 export default function Continues({ title }) {
   const list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  const [latest, setLatest] = useState([]);
+
+  const apiKey = "api_key=2084a00f95fb3e4737567fae4e38ed85";
+
+  const isMovies = async () => {
+    const response = await api.get(
+      `trending/movie/week?${apiKey}&language=en-US`
+    
+      );
+    setLatest(response.data.results);
+   // console.log(response);
+  };
+  useEffect(() => {
+    isMovies();
+  }, []);
+
   return (
-    <Container>
-      <ContainerCarousel>
-        <Carousel list={list} />
-      </ContainerCarousel>
-      {title && <TextExemple>{title}</TextExemple>}
-      <FlatList
-        data={list}
-        keyExtractor={(item, index) => `${index}`}
-        horizontal
-        renderItem={({ item }) => {
-          return (
-            <ContainerItens>
-              <Image
-                source={{
-                  uri: "https://img.redbull.com/images/c_crop,x_491,y_0,h_1280,w_1493/c_fill,w_650,h_540/q_auto,f_auto/redbullcom/2019/01/10/30651cde-bd71-4b46-ab11-d1441bb4f9d3/teoria-game-of-thrones-baseado-em-naruto-01",
-                }}
-              />
-              <TextDescription>Game Of Thrones 1 Temporada</TextDescription>
-            </ContainerItens>
-          );
-        }}
-      />
-    </Container>
+    <>
+      <Container>
+        <ContainerCarousel>
+          <Carousel list={latest} />
+        </ContainerCarousel>
+
+        <TextExemple>{title}</TextExemple>
+
+        <FlatList
+          data={list}
+          keyExtractor={(item, index) => `${index}`}
+          horizontal
+          renderItem={({ dados }) => {
+            const poster_path;
+            
+            const uri = `https://image.tmdb.org/t/p/w342/${dados.poster_path}`;
+
+            console.log(uri);
+
+            return (
+              <ContainerItens>
+                <Image
+                  source={{
+                    uri,
+                  }}
+                />
+                <TextDescription>Game Of Thrones 1 Temporada</TextDescription>
+              </ContainerItens>
+            );
+          }}
+        />
+      </Container>
+    </>
   );
 }

@@ -1,0 +1,47 @@
+[
+  {
+    "title": "DUBLADOS",
+    "movies": [
+      {
+        "id": 1,
+        "title": "O TESTE",
+        "synopsis": "VAI SAIR ALGO",
+        "language": "Ingles",
+        "duration": "1 hr",
+        "creation": "Algun autor",
+        "categories": [1]
+      },
+      {
+        "id": 2,
+        "title": "O TESTE",
+        "synopsis": "VAI SAIR ALGO",
+        "language": "Ingles",
+        "duration": "1 hr",
+        "creation": "Algun autor",
+        "categories": [1]
+      },
+      {
+        "id": 3,
+        "title": "O TESTE",
+        "synopsis": "VAI SAIR ALGO",
+        "language": "Ingles",
+        "duration": "1 hr",
+        "creation": "Algun autor",
+        "categories": [2]
+      },
+      {
+        "category": "Categorias",
+        "categories": [
+          {
+            "id": 1,
+            "title": "Suspense"
+          },
+          {
+            "id": 2,
+            "title": "Terror"
+          }
+        ]
+      }
+    ]
+  }
+]

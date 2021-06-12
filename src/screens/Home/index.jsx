@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { View, SafeAreaView, ScrollView, Text } from "react-native";
+import { View, Text } from "react-native";
 import Header from "../../components/Header";
 import SliderMovies from "../../components/SliderMovies";
-import api from "../../services/api";
+
 
 import Logo from "../../assets/utils/images/logo.png";
 import Teste from "../../components/Continues";
 import { Container } from "./styles";
+import Add from "../../services/movies/AddedNow.json";
+
+const language = "language=pt-BR";
 
 export default function Home() {
+  
   return (
     <Container>
       <Header image={Logo} search="search" />
@@ -19,6 +23,9 @@ export default function Home() {
 
       <View style={{ top: 70 }}>
         <Teste title="ADICIONADO AGORA" />
+        <View>
+          
+        </View>
       </View>
 
       <View style={{ top: 10 }}>
