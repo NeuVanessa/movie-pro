@@ -19,7 +19,7 @@ export default function DubbedMovie({ title }) {
   const language = "language=pt-BR";
   const isMovies = async () => {
     const response = await api.get(
-      `/movie/{movie_id}/translations?${apiKey}`
+      `https://api.themoviedb.org/3/movie/5/translations?${apiKey}`
     );
     setLatest(response.data.results);
     console.log(response);
@@ -51,7 +51,7 @@ export default function DubbedMovie({ title }) {
                     uri,
                   }}
                 />
-                <TextDescription>{item.title}</TextDescription>
+                <TextDescription>{item.name}</TextDescription>
               </ContainerItens>
             );
           }}
