@@ -3,16 +3,13 @@ import { View, Text } from "react-native";
 import Header from "../../components/Header";
 import SliderMovies from "../../components/SliderMovies";
 
-
 import Logo from "../../assets/utils/images/logo.png";
-import Teste from "../../components/Continues";
+import Continues from "../../components/Continues";
+import DubbedMovie from '../../components/DubbedMovie';
 import { Container } from "./styles";
-import Add from "../../services/movies/AddedNow.json";
-
-const language = "language=pt-BR";
+//import Add from "../../services/movies/AddedNow.json";
 
 export default function Home() {
-  
   return (
     <Container>
       <Header image={Logo} search="search" />
@@ -22,10 +19,8 @@ export default function Home() {
       </View>
 
       <View style={{ top: 70 }}>
-        <Teste title="ADICIONADO AGORA" />
-        <View>
-          
-        </View>
+        <Continues title="ADICIONADO AGORA" />
+        <View></View>
       </View>
 
       <View style={{ top: 10 }}>
@@ -33,6 +28,13 @@ export default function Home() {
       </View>
 
       <View style={{ flexDirection: "column", flex: 1 }}>
+        <View style={{ top: 0, backgroundColor: "#FFCB13" }}>
+          <DubbedMovie title="DUBLADOS" />
+        </View>
+
+
+        </View>
+      {/* <View style={{ flexDirection: "column", flex: 1 }}>
         <View style={{ top: 0, backgroundColor: "#FFCB13" }}>
           <Teste title="DUBLADOS" />
         </View>
@@ -42,7 +44,7 @@ export default function Home() {
         <View style={{ bottom: 30, backgroundColor: "#FFCB13", height: 320 }}>
           <Teste title="É HORA DA PIPOCA" />
         </View>
-      </View>
+      </View> */}
     </Container>
   );
 }

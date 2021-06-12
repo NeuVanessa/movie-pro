@@ -10,7 +10,7 @@ import {
   TextDescription,
 } from "./styles";
 import api from "../../services/api";
-export default function Continues({ title }) {
+export default function DubbedMovie({ title }) {
   //const lists = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   const [latest, setLatest] = useState([]);
@@ -19,10 +19,10 @@ export default function Continues({ title }) {
   const language = "language=pt-BR";
   const isMovies = async () => {
     const response = await api.get(
-      `trending/movie/week?${apiKey}&${language}&page=${1}`
+      `/movie/{movie_id}/translations?${apiKey}`
     );
     setLatest(response.data.results);
-    // console.log(response);
+    console.log(response);
   };
   useEffect(() => {
     isMovies();
