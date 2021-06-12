@@ -13,27 +13,24 @@ export const ContainerHeader = styled.View`
   flex-direction: row;
 `;
 export const ContainerTitle = styled.View`
-  flex-grow: 25px;
+  flex-grow: 25;
   background-color: transparent;
 `;
 export const ContainerSearch = styled.View`
-  flex-grow: 15px;
+  flex-grow: 15;
   background-color: transparent;
 `;
 
 export const ContainerImage = styled.View`
-  flex-grow: 10px;
+  flex-grow: 10;
 `;
 export const Image = styled.Image`
-  text-align: center;
   left: 16px;
-  font-weight: bold;
   margin-top: 0px;
 `;
 export const TextTitle = styled.Text`
   flex-grow: 30px;
   color: red;
-
   font-size: 15px;
   background-color: black;
 `;

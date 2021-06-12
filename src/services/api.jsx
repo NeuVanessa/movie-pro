@@ -1,10 +1,7 @@
-import axios from 'react-native-axios';
+import axios from "react-native-axios";
 
 const api = axios.create({
-
-baseURL: 'https://www.themoviedb.org/authenticate/{REQUEST_TOKEN}'
-
+  baseURL: "https://api.tvmaze.com/search/shows?q=",
 });
-console.log(baseURL);
 
 export default api;
