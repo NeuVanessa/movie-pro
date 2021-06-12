@@ -10,24 +10,8 @@ import { Container } from "./styles";
 
 export default function Home() {
   return (
-    //     <View>
-    //       <Header image={Logo} search="search" />
-    //       <SafeAreaView style={{ top: 80 }}>
-    //         <ScrollView>
-    //           <SliderMovies />
-
-    // <View>
-
-    // </View>
-
-    //      </ScrollView>
-
-    //       </SafeAreaView>
-    //     </View>
-
     <Container>
       <Header image={Logo} search="search" />
-      {/* <SliderMovies /> */}
 
       <View style={{ top: 70 }}>
         <SliderMovies title="CAROUSEL INFORMAÇÕES" />
