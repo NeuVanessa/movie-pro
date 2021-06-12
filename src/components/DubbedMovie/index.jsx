@@ -14,15 +14,14 @@ export default function DubbedMovie({ title }) {
   //const lists = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   const [latest, setLatest] = useState([]);
-
+  //https://api.themoviedb.org/3/
   const apiKey = "api_key=2084a00f95fb3e4737567fae4e38ed85";
   const language = "language=pt-BR";
   const isMovies = async () => {
     const response = await api.get(
-      `https://api.themoviedb.org/3/movie/5/translations?${apiKey}`
+      `movie/popular?${apiKey}&${language}&page=[2,3]`
     );
     setLatest(response.data.results);
-    console.log(response);
   };
   useEffect(() => {
     isMovies();
@@ -42,7 +41,7 @@ export default function DubbedMovie({ title }) {
           renderItem={({ item }) => {
             const uri = `https://image.tmdb.org/t/p/w342/${item.poster_path}`;
 
-            console.log(uri);
+            // console.log(uri);
 
             return (
               <ContainerItens>
@@ -51,7 +50,7 @@ export default function DubbedMovie({ title }) {
                     uri,
                   }}
                 />
-                <TextDescription>{item.name}</TextDescription>
+                <TextDescription>{item.title}</TextDescription>
               </ContainerItens>
             );
           }}

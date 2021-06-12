@@ -29,7 +29,7 @@ export default function Home() {
 
       <View style={{ flexDirection: "column", flex: 1 }}>
         <View style={{ top: 0, backgroundColor: "#FFCB13" }}>
-          <DubbedMovie title="DUBLADOS" />
+          <DubbedMovie title="POPULARES" />
         </View>
 
 
