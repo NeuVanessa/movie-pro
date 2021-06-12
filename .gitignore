@@ -52,5 +52,6 @@ buck-out/
 # Expo
 .expo/
 web-build/
-/src/components/
+/src/components/*
+!src/components/*
 
