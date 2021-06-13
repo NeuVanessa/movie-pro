@@ -55,5 +55,6 @@ web-build/
 
 # src
 src/
-components
+components/
+teste/
 
