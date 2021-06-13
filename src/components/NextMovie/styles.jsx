@@ -18,6 +18,7 @@ export const ContainerItens = styled.View`
   width: 120px;
   background-color: #473f3f;
   margin: 5px;
+  border-bottom-left-radius: 30px;
 `;
 
 export const Image = styled.Image.attrs({
@@ -25,7 +26,7 @@ export const Image = styled.Image.attrs({
 })`
   width: 100%;
   height: 70%;
-  border-bottom-left-radius: 100px;
+  
 `;
 
 export const TextExemple = styled.Text`

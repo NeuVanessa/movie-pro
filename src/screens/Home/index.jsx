@@ -10,6 +10,9 @@ import MostVoted from "../../components/MostVoted";
 import PosterMovie from "../../components/PosterMovie";
 import NextMovie from "../../components/NextMovie";
 
+import CarouselMovie from "../../components/CarouselMovie";
+import InfoApp from '../../components/InfoApp';
+
 import { Container } from "./styles";
 //import Add from "../../services/movies/AddedNow.json";
 
@@ -18,8 +21,11 @@ export default function Home() {
     <Container>
       <Header image={Logo} search="search" />
 
-      <View style={{ top: 70 }}>
-        <SliderMovies title="CAROUSEL INFORMAÇÕES" />
+      <View style={{ top:80}}>
+     
+        <CarouselMovie />
+     
+
       </View>
 
       <View style={{ top: 70 }}>
@@ -28,7 +34,7 @@ export default function Home() {
       </View>
 
       <View style={{ top: 10 }}>
-        <SliderMovies title="CONTINUE ASSISTINDO " />
+        <InfoApp/>
       </View>
 
       <View style={{ flexDirection: "column", flex: 1 }}>
